@@ -142,6 +142,13 @@ Summary:
 
 	If you use Postman, please import these and use them to start and report statistics on the Twitter sample stream.
 
+	To run this application:
+
+	Open the VS solution and build and ensure there are no errors (use the default Debug configuration).  
+	Press F5 or click the green arrow in fron of the text "IIS Expresss (Firefox)" in the VS File menu.  This will start the webservices.
+	Start the stream process by using the provided Postman script "Start and consume Twitter sample stream"
+	Periodically get the stream statistics by using the provided Postman script "GET Twitter Feed Statistical Results (on demand)"
+
 	Thanks,
 
 	Ed Wax
