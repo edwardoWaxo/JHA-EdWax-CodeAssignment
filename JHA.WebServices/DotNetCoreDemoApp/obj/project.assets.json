@@ -3142,11 +3142,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\DotNetCoreDemoApp\\DotNetCoreDemoApp.csproj",
+      "projectUniqueName": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\DotNetCoreDemoApp\\DotNetCoreDemoApp.csproj",
       "projectName": "DotNetCoreDemoApp",
-      "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\DotNetCoreDemoApp\\DotNetCoreDemoApp.csproj",
+      "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\DotNetCoreDemoApp\\DotNetCoreDemoApp.csproj",
       "packagesPath": "C:\\Users\\ed_wa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\DotNetCoreDemoApp\\obj\\",
+      "outputPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\DotNetCoreDemoApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -3167,20 +3167,20 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.BusinessLogic.Interface\\JHA.WebServices.BusinessLogic.Interface.csproj": {
-              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.BusinessLogic.Interface\\JHA.WebServices.BusinessLogic.Interface.csproj"
+            "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.BusinessLogic.Interface\\JHA.WebServices.BusinessLogic.Interface.csproj": {
+              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.BusinessLogic.Interface\\JHA.WebServices.BusinessLogic.Interface.csproj"
             },
-            "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.BusinessLogic\\JHA.WebServices.BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.BusinessLogic\\JHA.WebServices.BusinessLogic.csproj"
+            "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.BusinessLogic\\JHA.WebServices.BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.BusinessLogic\\JHA.WebServices.BusinessLogic.csproj"
             },
-            "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Contract\\JHA.WebServices.Contract.csproj": {
-              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Contract\\JHA.WebServices.Contract.csproj"
+            "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Contract\\JHA.WebServices.Contract.csproj": {
+              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Contract\\JHA.WebServices.Contract.csproj"
             },
-            "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Repository.InMemory\\JHA.WebServices.Repository.InMemory.csproj": {
-              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Repository.InMemory\\JHA.WebServices.Repository.InMemory.csproj"
+            "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Repository.InMemory\\JHA.WebServices.Repository.InMemory.csproj": {
+              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Repository.InMemory\\JHA.WebServices.Repository.InMemory.csproj"
             },
-            "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Repository.Interface\\JHA.WebServices.Repository.Interface.csproj": {
-              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.WebServices\\JHA.WebServices.Repository.Interface\\JHA.WebServices.Repository.Interface.csproj"
+            "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Repository.Interface\\JHA.WebServices.Repository.Interface.csproj": {
+              "projectPath": "C:\\Users\\ed_wa\\source\\repos\\JHA.EdWax.WebServices\\JHA.WebServices\\JHA.WebServices.Repository.Interface\\JHA.WebServices.Repository.Interface.csproj"
             }
           }
         }
