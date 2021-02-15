@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="TweetinviAPI" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JHA.WebServices.BusinessLogic.Interface\JHA.WebServices.BusinessLogic.Interface.csproj" />
+    <ProjectReference Include="..\JHA.WebServices.BusinessLogic\JHA.WebServices.BusinessLogic.csproj" />
+    <ProjectReference Include="..\JHA.WebServices.Contract\JHA.WebServices.Contract.csproj" />
+    <ProjectReference Include="..\JHA.WebServices.Repository.InMemory\JHA.WebServices.Repository.InMemory.csproj" />
+    <ProjectReference Include="..\JHA.WebServices.Repository.Interface\JHA.WebServices.Repository.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

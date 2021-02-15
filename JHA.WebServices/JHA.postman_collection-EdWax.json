@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "64b6ce54-8ae0-414a-a372-19c63911d39b",
+		"name": "JohnHenryAndAssociates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Twitter Feed Statistical Results (on demand)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUri}}api/twitter/report",
+					"host": [
+						"{{baseUri}}api"
+					],
+					"path": [
+						"twitter",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start and consume Twitter sample stream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUri}}/api/twitter/",
+					"host": [
+						"{{baseUri}}"
+					],
+					"path": [
+						"api",
+						"twitter",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
