@@ -1,0 +1,8 @@
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\bin\Debug\JHA.WebServices.Api.UnitTest.dll
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\bin\Debug\JHA.WebServices.Api.UnitTest.pdb
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\bin\Debug\nunit.framework.dll
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\bin\Debug\nunit.framework.xml
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\obj\Debug\JHA.WebServices.Api.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\obj\Debug\JHA.WebServices.Api.UnitTest.csproj.CopyComplete
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\obj\Debug\JHA.WebServices.Api.UnitTest.dll
+C:\Users\ed_wa\source\repos\JHA.EdWax.WebServices\JHA.WebServices\JHA.WebServices.Api.UnitTest\obj\Debug\JHA.WebServices.Api.UnitTest.pdb

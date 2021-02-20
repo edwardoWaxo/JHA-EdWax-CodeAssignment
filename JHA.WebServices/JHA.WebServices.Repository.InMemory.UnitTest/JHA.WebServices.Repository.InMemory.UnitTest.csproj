@@ -116,11 +116,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TwitterRepository.cs" />
+    <Compile Include="TwitterResults.cs" />
     <Compile Include="UnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="SampleSerializedTwitterFeed.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JHA.WebServices.Contract\JHA.WebServices.Contract.csproj">

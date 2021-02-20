@@ -24,19 +24,35 @@
 			"response": []
 		},
 		{
-			"name": "Start and consume Twitter sample stream",
+			"name": "POST Start and consume Twitter sample stream",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Url\": \"https://api.twitter.com/2/tweets/sample/stream\",\r\n\t\"ApiKey\": \"3mPNFry9ukj3w8bdIA3GjI94i\",\r\n\t\"ApiKeySecret\": \"rQUNxAPh0ba1FnVzknYAtJvExlTbJPfFqhbgfe9THFXPFy3Qu9\",\r\n\t\"AccessToken\": \"1359179418195939329-4xtDPJYewyh6sQAHG1kPTJVXrShT0m\",\r\n\t\"AccessTokenSecret\": \"ejFE8QdUggwhe4WishQVBNiV8y3j21qlf7D00t4c666dq\",\r\n\t\"BearerToken\": \"AAAAAAAAAAAAAAAAAAAAAMpTMgEAAAAA6Y4%2FQRX4p2recuNoCVHlUQvRRts%3Dvr7KpF3JisYSBMJfUCXzcyXfQ2GGphu3WSJAYyHa2Yrw3zKtVI\"\r\n}"
+				},
 				"url": {
-					"raw": "{{baseUri}}/api/twitter/",
+					"raw": "{{baseUri}}/api/twitter/stream/start",
 					"host": [
 						"{{baseUri}}"
 					],
 					"path": [
 						"api",
 						"twitter",
-						""
+						"stream",
+						"start"
 					]
 				}
 			},

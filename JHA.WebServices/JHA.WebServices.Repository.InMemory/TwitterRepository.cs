@@ -38,12 +38,26 @@ namespace JHA.WebServices.Repository.InMemory
 
 		public TwitterStatistics GetTwitterStatistics()
 		{
-			return this.TwitterResults.GetTwitterStatistics();
+			try
+			{
+				return this.TwitterResults.GetTwitterStatistics();
+			}
+			catch (Exception e)
+			{
+			}
+			return new TwitterStatistics();
 		}
 
 		public bool PersistTweet(TweetV2 tweet)
 		{
-			return this.TwitterResults.PersistTweet(tweet);
+			try
+			{
+				return this.TwitterResults.PersistTweet(tweet);
+			}
+			catch (Exception e)
+			{ 
+			}
+			return false;
 		}
 
 		#endregion

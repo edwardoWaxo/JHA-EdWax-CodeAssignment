@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using JHA.WebServices.Contract.Twitter;
-using JHA.WebServices.Contract;
 using JHA.WebServices.Repository.Interface;
-using Newtonsoft.Json;
 using Tweetinvi.Models.V2;
 
-namespace JHA.WebServices.Repository.InMemory
+namespace JHA.WebServices.Repository.InMemory.UnitTest
 {
 
 	public class TwitterResults : ITwitterResults
@@ -60,12 +55,16 @@ namespace JHA.WebServices.Repository.InMemory
 
 		public void GetEmojiCount(ref TwitterStatistics stats)
 		{
-			throw new NotImplementedException();
+			// TODO: get emoji count
+			// Need to determine where emoji are located in the Twitter Feed.
+			return;
 		}
 
 		public void GetEmojiInfo(ref TwitterStatistics stats)
 		{
-			throw new NotImplementedException();
+			// TODO: get emoji info (top emojis)
+			// Need to determine where emoji are located in the Twitter Feed.
+			return;
 		}
 
 		public void GetHashTags(ref TwitterStatistics stats)
@@ -131,36 +130,28 @@ namespace JHA.WebServices.Repository.InMemory
 			{
 				return stats;
 			}
+			
+			// Take a snapshot of the current TweetList and report against those.
+			this.SnapshotTweetList = this.TweetList.Take(this.TweetList.Count).ToList();
 
-			try
-			{
-				// Take a snapshot of the current TweetList and report against those.
-				this.SnapshotTweetList = this.TweetList.Take(this.TweetList.Count).ToList();
+			// Tweets - total and rates ...
+			this.GetTweetCount(ref stats, Contract.Enums.TwitterCountType.PreReportingCount);
+			this.GetTweetRates(ref stats);  
 
-				// Tweets - total and rates ...
-				this.GetTweetCount(ref stats, Contract.Enums.TwitterCountType.PreReportingCount);
-				this.GetTweetRates(ref stats);
+			// URL info ...
+			this.GetUrlCount(ref stats);
 
-				// URL info ...
-				this.GetUrlCount(ref stats);
-				this.GetUrlInfo(ref stats);
+			// HashTag info ...
+			this.GetHashTags(ref stats);
 
-				// HashTag info ...
-				this.GetHashTags(ref stats);
+			//var entities = this.TweetList.Where(p => p.Entities != null).Select(p => p.Entities);
+			//var urls = entities.Where(p => p.Urls != null).Select(p => p.Urls);
+			//var hashTags = entities.Where(p => p.Hashtags != null).Select(p => p.Hashtags); // moved
 
-				//var entities = this.TweetList.Where(p => p.Entities != null).Select(p => p.Entities);
-				//var urls = entities.Where(p => p.Urls != null).Select(p => p.Urls);
-				//var hashTags = entities.Where(p => p.Hashtags != null).Select(p => p.Hashtags); // moved
+			// Get the number of tweets that have arrived since we took our snapshot ...
+			this.GetTweetCount(ref stats, Contract.Enums.TwitterCountType.PostReportingCount);
 
-				// Get the number of tweets that have arrived since we took our snapshot ...
-				this.GetTweetCount(ref stats, Contract.Enums.TwitterCountType.PostReportingCount);
-
-				this.SnapshotTweetList.Clear();
-			}
-			catch (Exception e)
-			{
-			}
-
+			this.SnapshotTweetList.Clear();
 			return stats;
 		}
 
@@ -201,18 +192,6 @@ namespace JHA.WebServices.Repository.InMemory
 			stats.TweetsWithPhotoUrlCount = picUrlCount;
 			stats.PercentTweetsWithPhotoUrl = percentUrlsWithPic;
 			stats.PercentTweetsWithUrl = percentTweetsWithUrl;
-
-			stats.UrlList.Clear();
-			foreach (var url in urls)
-			{
-				foreach (var u in url)
-				{
-					if (stats.UrlList.Count() < 10)
-					{
-						stats.UrlList.Add(u.Url);
-					}
-				}
-			}
 		}
 
 		/// <summary>
@@ -232,10 +211,9 @@ namespace JHA.WebServices.Repository.InMemory
 			try
 			{
 				this.TweetList.Add(tweet);
-				if (this.TweetList.Count % 1000 == 0 && this.TweetList.Count <= 5000)
+				if (this.TweetList.Count % 1000 == 0)
 				{
 					Console.WriteLine($"We have received {this.TweetList.Count} tweets");
-					this.WriteTweetsToFile(this.TweetList.Count-1000, 500);
 				}
 				isPersisted = true;
 			}
@@ -247,44 +225,5 @@ namespace JHA.WebServices.Repository.InMemory
 		}
 
 		#endregion
-
-		/// <summary>
-		/// Writes the tweets to file.
-		/// </summary>
-		/// <param name="skipCount">The skip count.</param>
-		/// <param name="takeCount">The take count.</param>
-		private void WriteTweetsToFile(int skipCount, int takeCount)
-		{
-			var tweets = this.TweetList.Skip(skipCount).Take(takeCount).ToList();
-			if (!(tweets.Count > 0))
-				return;
-	
-			var rootDirectory = "C:\\temp";
-			var fullPath = $"{rootDirectory}\\tweets_{skipCount}-{takeCount}.json";
-			
-			if (System.IO.File.Exists(fullPath))
-			{
-				System.IO.File.Delete(fullPath);
-			}
-
-			var fileStream = System.IO.File.OpenWrite(fullPath);
-			using (StreamWriter sw = new StreamWriter(fileStream))
-			{
-				if (tweets.Count > 1)
-				{
-					sw.WriteLine("[");
-				}
-				foreach (var tweet in tweets)
-				{
-					var serializedTweet = JsonConvert.SerializeObject(tweet);
-					sw.WriteLine($"{serializedTweet},");
-				}
-				if (tweets.Count > 1)
-				{
-					sw.WriteLine("]");
-				}
-			}
-			fileStream.Close();
-		}
 	}
 }

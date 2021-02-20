@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Tweetinvi;
 using JHA.WebServices.BusinessLogic.Interface;
-using JHA.WebServices.Repository.Interface;
-using JHA.WebServices.Repository.InMemory.UnitTest;
-using JHA.WebServices.Contract;
 using JHA.WebServices.Contract.Twitter;
+using JHA.WebServices.Repository.Interface;
+using Tweetinvi;
+using Tweetinvi.Models.V2;
 
 namespace JHA.WebServices.BusinessLogic.UnitTest
 {
@@ -24,6 +20,10 @@ namespace JHA.WebServices.BusinessLogic.UnitTest
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TwitterProvider"/> class.
 		/// </summary>
+		/// <remarks>
+		/// The class property, Repository, is injected with a concrete implementation 
+		/// by our DependencyInjection.InjectDependencies class.
+		/// </remarks>
 		public TwitterProvider(ITwitterRepository repo)
 		{
 			this.Repository = repo;
@@ -34,49 +34,121 @@ namespace JHA.WebServices.BusinessLogic.UnitTest
 		#region Public Properties
 
 		public ITwitterRepository Repository { get; set; }
+		public Tweetinvi.Streaming.V2.ISampleStreamV2 SampleStream { get; set; }
+		public DateTime StreamStartedAt { get; set; }
 
 		#endregion
 
 		#region Public Methods
 
 		/// <summary>
-		/// Creates the and consume stream.
+		/// Consumes the (sample) stream.
 		/// </summary>
-		/// <returns></returns>
-		/// <exception cref="NotImplementedException"></exception>
-		public async Task CreateAndConsumeStream()
+		/// <param name="sampleStream">The sample stream.</param>
+		public async Task ConsumeStream(Tweetinvi.Streaming.V2.ISampleStreamV2 sampleStream)
 		{
-			var config = this.GetConfiguration();
+			// Consume the sample twitter stream ...
+			while (true)
+			{
+				try
+				{
+					sampleStream.TweetReceived += (sender, args) =>
+					{
+						var tweet = args.Tweet;
+						if (tweet != null)
+						{
+							this.PersistTweet(tweet);
+						}
+					};
+
+					await sampleStream.StartAsync();
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+
+		/// <summary>
+		/// Creates and consumes the Twitter sample stream.  Here we implement the SOA Design Principle of 
+		/// Composability by composing the singular piece-parts into one.
+		/// </summary>
+		/// <param name="configFromRequest">The configuration from request.</param>
+		public async Task CreateAndConsumeStream(TwitterConfiguration configFromRequest)
+		{
+			// Get the configuration keys/tokens, create credentials from them and finally create our Twitter client ...
+			var config = this.GetConfiguration(configFromRequest);
+			var appCredentials = this.CreateCredentials(config);
+			var appClient = this.CreateTwitterClient(appCredentials);
+
+			// Create our Sample Stream ...
+			this.SampleStream = this.CreateStream(appClient);
+			this.StreamStartedAt = DateTime.UtcNow;
+
+			// Consume our Sample Stream ...
+			try
+			{
+				await this.ConsumeStream(this.SampleStream);
+			}
+			catch (Exception e)
+			{
+				// Take corrective actions, if needed.  At the least, provide some type of feedback
+				// via logging, so something like that.
+			}
+		}
+
+		/// <summary>
+		/// Creates the credentials.
+		/// </summary>
+		/// <param name="config">The configuration.</param>
+		/// <returns></returns>
+		public Tweetinvi.Models.ConsumerOnlyCredentials CreateCredentials(TwitterConfiguration config)
+		{
 			var appCredentials = new Tweetinvi.Models.ConsumerOnlyCredentials(config.ApiKey, config.ApiKeySecret)
 			{
 				BearerToken = config.BearerToken
 			};
-			var appClient = new TwitterClient(appCredentials);
 
-			var tweetList = new List<Tweetinvi.Models.V2.TweetV2>(); // TODO: move to repository
+			return appCredentials;
+		}
 
+		/// <summary>
+		/// Creates the stream.
+		/// </summary>
+		/// <param name="configFromRequest">The configuration from request.</param>
+		/// <returns></returns>
+		public Tweetinvi.Streaming.V2.ISampleStreamV2 CreateStream(TwitterConfiguration configFromRequest)
+		{
+			var config = this.GetConfiguration(configFromRequest);
+			var appCredentials = this.CreateCredentials(config);
+			var appClient = this.CreateTwitterClient(appCredentials);
 			var sampleStreamV2 = appClient.StreamsV2.CreateSampleStream();
-			{
-				sampleStreamV2.TweetReceived += (sender, args) =>
-				{
-					var tweet = args.Tweet;
-					if (tweet != null)
-					{
-						tweetList.Add(tweet);
-						Console.WriteLine($"got another tweet ... count is {tweetList.Count}");
-						var tweetString = appClient.Json.Serialize<Tweetinvi.Models.V2.TweetV2>(tweet);
-						if (tweetList.Count % 15 == 0)
-						{
-							Console.WriteLine($"Tweet as JSON string: {tweetString}");
-						}
-						//if (tweet.Text != null) Console.WriteLine($"tweet text is: {tweet.Text}");
-						//if (tweet.Entities != null) Console.WriteLine($"tweet hashtag is: {tweet.Entities.Hashtags}");
-					}
-					//System.Console.WriteLine(args.Tweet.Text);
-				};
+			this.StreamStartedAt = DateTime.UtcNow;
 
-				await sampleStreamV2.StartAsync();
-			}
+			return sampleStreamV2;
+		}
+
+		/// <summary>
+		/// Creates the (sample) stream.
+		/// </summary>
+		/// <param name="client">The client.</param>
+		/// <returns></returns>
+		public Tweetinvi.Streaming.V2.ISampleStreamV2 CreateStream(TwitterClient client)
+		{
+			var sampleStream = client.StreamsV2.CreateSampleStream();
+
+			return sampleStream;
+		}
+
+		/// <summary>
+		/// Creates the twitter client.
+		/// </summary>
+		/// <param name="creds">The creds.</param>
+		/// <returns></returns>
+		public TwitterClient CreateTwitterClient(Tweetinvi.Models.ConsumerOnlyCredentials creds)
+		{
+			var appClient = new TwitterClient(creds);
+			return appClient;
 		}
 
 		/// <summary>
@@ -96,14 +168,43 @@ namespace JHA.WebServices.BusinessLogic.UnitTest
 			return config;
 		}
 
-		public TwitterStatistics GetStatistics()
+		/// <summary>
+		/// Gets the configuration.
+		/// </summary>
+		/// <param name="configFromRequest">The configuration from request.</param>
+		/// <returns></returns>
+		public TwitterConfiguration GetConfiguration(TwitterConfiguration configFromRequest)
 		{
-			throw new NotImplementedException();
+			// Get the configuration info.  There are 2 possible sources:
+			//	1. The body of the POST request (configFromRequest)
+			//	2. The app.config file
+			var config = (configFromRequest == null)
+				? this.GetConfiguration()
+				: configFromRequest;
+
+			return config;
 		}
 
-		public bool PersistTweet(Tweetinvi.Models.V2.TweetV2 tweet)
+		/// <summary>
+		/// Gets the statistics.
+		/// </summary>
+		/// <returns></returns>
+		public TwitterStatistics GetStatistics()
 		{
-			throw new NotImplementedException();
+			var stats = this.Repository.GetTwitterStatistics();
+
+			return stats;
+		}
+
+		/// <summary>
+		/// Persists the tweet.
+		/// </summary>
+		/// <param name="tweet">The tweet.</param>
+		/// <returns></returns>
+		public bool PersistTweet(TweetV2 tweet)
+		{
+			var isPersisted = this.Repository.PersistTweet(tweet);
+			return isPersisted;
 		}
 
 		#endregion

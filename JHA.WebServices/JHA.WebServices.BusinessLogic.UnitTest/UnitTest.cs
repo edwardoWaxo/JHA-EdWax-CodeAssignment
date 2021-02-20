@@ -1,14 +1,12 @@
-﻿using JHA.WebServices.BusinessLogic.Interface;
-using JHA.WebServices.Contract;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using JHA.WebServices.BusinessLogic.Interface;
 using JHA.WebServices.Contract.Twitter;
 using JHA.WebServices.Repository.Interface;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using Tweetinvi;
-using Tweetinvi.Models;
-using System.Collections.Generic;
-using System.IO;
-using System;
-using System.Threading.Tasks;
 
 namespace JHA.WebServices.BusinessLogic.UnitTest
 {
@@ -243,6 +241,26 @@ namespace JHA.WebServices.BusinessLogic.UnitTest
 			Assert.AreEqual(0, stats.TweetCount);
 
 			Console.WriteLine($"Twitter statistics: {stats.ToString()}");
+		}
+
+		[Test]
+		public void SerializeConfig_Test()
+		{
+			// Arrange
+
+			// Act
+			var config = this.TwitterProvider.GetConfiguration();
+			var jsonString = JsonConvert.SerializeObject(config);
+
+			// Assert
+			Assert.IsNotNull(config);
+			Assert.IsNotNull(config.Url);
+			Assert.IsNotNull(config.ApiKey);
+			Assert.IsNotNull(config.ApiKeySecret);
+			Assert.IsNotNull(config.AccessToken);
+			Assert.IsNotNull(config.AccessTokenSecret);
+			Assert.IsNotNull(config.BearerToken);
+			Assert.IsNotNull(jsonString);
 		}
 
 		#endregion

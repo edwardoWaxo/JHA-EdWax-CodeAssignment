@@ -21,19 +21,60 @@ namespace JHA.WebServices.Contract.Twitter
 
 		#region Public Properties
 
+		/// <summary>
+		/// Gets or sets the tweet count.
+		/// </summary
 		public int TweetCount { get; set; }
-		public int TeetsSinceReporting { get; set; }
 
+		/// <summary>
+		/// Gets or sets the tweets since reporting.
+		/// </summary>
+		public int TweetsSinceReporting { get; set; }
+
+		/// <summary>
+		/// Gets or sets the tweets with emoji count.
+		/// </summary>
 		public int TweetsWithEmojiCount { get; set; }
 
+		/// <summary>
+		/// Gets or sets the percent tweets with emoji.
+		/// </summary>
+		public float PercentTweetsWithEmoji { get; set; }
+
+		/// <summary>
+		/// Gets or sets the tweets with URL count.
+		/// </summary>
 		public int TweetsWithUrlCount { get; set; }
 
+		/// <summary>
+		/// Gets or sets the percent tweets with URL.
+		/// </summary>
+		public float PercentTweetsWithUrl { get; set; }
+
+		/// <summary>
+		/// Gets or sets the tweets with photo URL count.
+		/// </summary>
 		public int TweetsWithPhotoUrlCount { get; set; }
 
+		/// <summary>
+		/// Gets or sets the percent tweets with photo URL.
+		/// </summary>
+		public float PercentTweetsWithPhotoUrl { get; set; }
+
+		/// <summary>
+		/// Gets or sets the tweets per hour.
+		/// </summary>
 		public float TweetsPerHour { get; set; }
 
+		/// <summary>
+		/// Gets or sets the tweets per minute.
+		/// </summary>
+		/// <value>
 		public float TweetsPerMinute { get; set; }
 
+		/// <summary>
+		/// Gets or sets the tweets per second.
+		/// </summary>
 		public float TweetsPerSecond { get; set; }
 
 		/// <summary>
@@ -46,6 +87,9 @@ namespace JHA.WebServices.Contract.Twitter
 		/// </summary>ary>
 		public DateTime ToDateTime { get; set; }
 
+		/// <summary>
+		/// Gets or sets the sample time in seconds.
+		/// </summary>
 		public int SampleTimeInSeconds { get; set; }
 
 		public ICollection<string> EmojiList { get; set; }
@@ -59,12 +103,13 @@ namespace JHA.WebServices.Contract.Twitter
 		{
 			var sb = new StringBuilder();
 			sb.AppendLine("");
-			sb.AppendLine($"         Total tweet count: {this.TweetCount}");
-			sb.AppendLine($"   Tweets with emoji count: {this.TweetsWithEmojiCount}");
-			sb.AppendLine($"     Tweets with url count: {this.TweetsWithUrlCount}");
-			sb.AppendLine($"Tweet with photo url count: {this.TweetsWithPhotoUrlCount}");
-			sb.AppendLine($"            From datetimet: {this.FromDateTime}");
-			sb.AppendLine($"               To datetime: {this.ToDateTime}");
+			sb.AppendLine($"     Total number of tweets: {this.TweetCount}");
+			sb.AppendLine($"    Tweets with emoji count: {this.TweetsWithEmojiCount}");
+			sb.AppendLine($"      Tweets with url count: {this.TweetsWithUrlCount}");
+			sb.AppendLine($"Tweets with photo url count: {this.TweetsWithPhotoUrlCount}");
+			sb.AppendLine($"   Percent tweets w/pic url: {this.PercentTweetsWithPhotoUrl}");
+			sb.AppendLine($"             From datetimet: {this.FromDateTime}");
+			sb.AppendLine($"                To datetime: {this.ToDateTime}");
 
 			return sb.ToString();
 		}

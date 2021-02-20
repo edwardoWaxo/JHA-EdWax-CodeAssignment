@@ -15,17 +15,15 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 
 		public TwitterRepository()
 		{
-			if (this.TweetList == null)
-			{
-				this.TweetList = new List<TweetV2>();
-			}
+			this.TwitterResults = TwitterResults.Instance;
 		}
 
 		#endregion
 
 		#region Public Properties
 
-		public List<TweetV2> TweetList { get; set; }
+		//public List<TweetV2> TweetList { get; set; }
+		public TwitterResults TwitterResults { get; set; }
 
 		#endregion
 
@@ -38,7 +36,7 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 
 		public bool PersistTweet(TweetV2 tweet)
 		{
-			throw new NotImplementedException();
+			return this.TwitterResults.PersistTweet(tweet);
 		}
 
 		#endregion

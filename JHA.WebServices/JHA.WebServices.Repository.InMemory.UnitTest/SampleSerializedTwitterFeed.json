@@ -1,0 +1,758 @@
+[
+	{
+		"attachments": null,
+		"author_id": "1306406616930103296",
+		"context_annotations": null,
+		"conversation_id": "1360364309205970951",
+		"created_at": "2021-02-12T23:10:55+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 16,
+					"start": 0,
+					"username": "idolshelpffxofi"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360365799643430914",
+		"in_reply_to_user_id": "833480569124175872",
+		"lang": "pt",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360364309205970951",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for iPhone",
+		"text": "@idolshelpffxofi ME COLOCA ADM ME COLOCA ADM ME COLOCA ADM ME COLOCA ADM ME COLOCA ADM",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1178988051621699585",
+		"context_annotations": null,
+		"conversation_id": "1360365795444989956",
+		"created_at": "2021-02-12T23:10:54+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": null,
+			"urls": [
+				{
+					"display_url": "twitter.com/abbie_nb/statu.",
+					"end": 45,
+					"expanded_url": "https://twitter.com/abbie_nb/status/1360350009082990592",
+					"start": 22,
+					"url": "https://t.co/hxXg0HmWNX",
+					"unwound_url": null
+				}
+			]
+		},
+		"geo": null,
+		"id": "1360365795444989956",
+		"in_reply_to_user_id": null,
+		"lang": "en",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360350009082990592",
+				"type": "quoted"
+			}
+		],
+		"source": "Twitter for iPhone",
+		"text": "Have mercy god damn ?? https://t.co/hxXg0HmWNX",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1286075008624685056",
+		"context_annotations": null,
+		"conversation_id": "1360347651624099842",
+		"created_at": "2021-02-12T23:10:53+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 11,
+					"start": 0,
+					"username": "xoallieee_"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360365791225421828",
+		"in_reply_to_user_id": "1238264188407029761",
+		"lang": "und",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360347651624099842",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for iPhone",
+		"text": "@xoallieee_ ^-^",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "775091788860325888",
+		"context_annotations": null,
+		"conversation_id": "1360365791242301440",
+		"created_at": "2021-02-12T23:10:53+00:00",
+		"entities": {
+			"annotations": [
+				{
+					"end": 30,
+					"normalized_text": "Donald",
+					"probability": 0.9979,
+					"start": 25,
+					"type": "Person"
+				}
+			],
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 13,
+					"start": 3,
+					"username": "B52Malmet"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360365791242301440",
+		"in_reply_to_user_id": null,
+		"lang": "en",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360362995340238849",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "RT @B52Malmet: Lucky for Donald he is beyond shame, beyond embarrassment, beyond human reactions. Because his lawyers are shameful and emba.",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 63
+		}
+	},
+	{
+		"attachments": {
+			"media_keys": [
+				"7_1358374718009532419"
+			],
+			"poll_ids": null
+		},
+		"author_id": "1281336182681427968",
+		"context_annotations": null,
+		"conversation_id": "1360365787047841793",
+		"created_at": "2021-02-12T23:10:52+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 12,
+					"start": 3,
+					"username": "faerluck"
+				}
+			],
+			"urls": [
+				{
+					"display_url": "pic.twitter.com/pfjY962fK9",
+					"end": 92,
+					"expanded_url": "https://twitter.com/faerluck/status/1358375116707557377/video/1",
+					"start": 69,
+					"url": "https://t.co/pfjY962fK9",
+					"unwound_url": null
+				}
+			]
+		},
+		"geo": null,
+		"id": "1360365787047841793",
+		"in_reply_to_user_id": null,
+		"lang": "zh",
+		"possibly_sensitive": true,
+		"referenced_tweets": [
+			{
+				"id": "1358375116707557377",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "RT @faerluck: ??????????,????????,?????????\n\n?????????????????,????????? https://t.co/pfjY962fK9",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 734
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "43730427",
+		"context_annotations": [
+			{
+				"domain": {
+					"description": "A section of a government, like The Supreme Court",
+					"id": "88",
+					"name": "Political Body"
+				},
+				"entity": {
+					"description": "Headquarters of the United States Department of Defense, the Pentagon",
+					"id": "943144105453936641",
+					"name": "The Pentagon"
+				}
+			}
+		],
+		"conversation_id": "1360365787035410439",
+		"created_at": "2021-02-12T23:10:52+00:00",
+		"entities": {
+			"annotations": [
+				{
+					"end": 23,
+					"normalized_text": "PENTAGON",
+					"probability": 0.8653,
+					"start": 16,
+					"type": "Organization"
+				}
+			],
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 14,
+					"start": 3,
+					"username": "CoreyGoode"
+				}
+			],
+			"urls": [
+				{
+					"display_url": "ufoexplorations.com",
+					"end": 98,
+					"expanded_url": "https://www.ufoexplorations.com/",
+					"start": 75,
+					"url": "https://t.co/JLFhZoekA5",
+					"unwound_url": "https://www.ufoexplorations.com/"
+				}
+			]
+		},
+		"geo": null,
+		"id": "1360365787035410439",
+		"in_reply_to_user_id": null,
+		"lang": "en",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360300714740752391",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter Web App",
+		"text": "RT @CoreyGoode: PENTAGON ADMITS IT HAS UFO DEBRIS,\nRELEASES TEST RESULTS - https://t.co/JLFhZoekA5",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 63
+		}
+	},
+	{
+		"attachments": {
+			"media_keys": null,
+			"poll_ids": [
+				"1360365735978151936"
+			]
+		},
+		"author_id": "1517028211",
+		"context_annotations": null,
+		"conversation_id": "1360365736720498691",
+		"created_at": "2021-02-12T23:10:40+00:00",
+		"entities": null,
+		"geo": null,
+		"id": "1360365736720498691",
+		"in_reply_to_user_id": null,
+		"lang": "en",
+		"possibly_sensitive": false,
+		"referenced_tweets": null,
+		"source": "Twitter for iPhone",
+		"text": "As much as I hate to do this let's do this # rovers  TM:",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1339102246953340928",
+		"context_annotations": null,
+		"conversation_id": "1360355882119229442",
+		"created_at": "2021-02-12T23:10:40+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 14,
+					"start": 0,
+					"username": "Mayoi_Present"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360365736724627457",
+		"in_reply_to_user_id": "1312968609904222208",
+		"lang": "ja",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360355882119229442",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for iPhone",
+		"text": "@Mayoi_Present ?????????(????` ? ???')???\n???????????☺??",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "3186286175",
+		"context_annotations": null,
+		"conversation_id": "1360440143845425152",
+		"created_at": "2021-02-13T04:16:17+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 11,
+					"start": 0,
+					"username": "fulllaikci"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360442647681318915",
+		"in_reply_to_user_id": "1147900379637719040",
+		"lang": "tr",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360440143845425152",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for iPad",
+		"text": "@fulllaikci Günaydın Fulyacığım 🌸☕️🤗🐞",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1355201020154896385",
+		"context_annotations": null,
+		"conversation_id": "1360442265458540546",
+		"created_at": "2021-02-13T04:16:17+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 9,
+					"start": 0,
+					"username": "mrkrubie"
+				},
+				{
+					"end": 21,
+					"start": 10,
+					"username": "haidaraksa"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360442647672852483",
+		"in_reply_to_user_id": "1311508272189370370",
+		"lang": "in",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360442405560942594",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "@mrkrubie @haidaraksa WKWKWKWK SARA",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "717194706",
+		"context_annotations": [
+			{
+				"domain": {
+					"description": "Top level entities that describe a Brands industry",
+					"id": "45",
+					"name": "Brand Vertical"
+				},
+				"entity": {
+					"description": null,
+					"id": "781974596148793345",
+					"name": "Business & finance"
+				}
+			},
+			{
+				"domain": {
+					"description": "Categories within Brand Verticals that narrow down the scope of Brands",
+					"id": "46",
+					"name": "Brand Category"
+				},
+				"entity": {
+					"description": null,
+					"id": "781974596731871232",
+					"name": "Banking"
+				}
+			},
+			{
+				"domain": {
+					"description": "Brands and Companies",
+					"id": "47",
+					"name": "Brand"
+				},
+				"entity": {
+					"description": "Nubank",
+					"id": "996434881839157248",
+					"name": "Nubank"
+				}
+			}
+		],
+		"conversation_id": "1360618309989896192",
+		"created_at": "2021-02-13T16:05:37+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 14,
+					"start": 0,
+					"username": "fergoncalvesa"
+				}
+			],
+			"urls": null
+		},
+		"geo": {
+			"coordinates": null,
+			"place_id": "5722ff20ba67083b"
+		},
+		"id": "1360621157251227648",
+		"in_reply_to_user_id": "101836648",
+		"lang": "pt",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360618309989896192",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "@fergoncalvesa Seu cartao é da nubank?? Pq uma amiga minha tbm teve o cartao dela clonado essa semana",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1016278422434336768",
+		"context_annotations": null,
+		"conversation_id": "1360620561253224449",
+		"created_at": "2021-02-13T16:05:37+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 13,
+					"start": 0,
+					"username": "Ghaida_oun96"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360621157221826563",
+		"in_reply_to_user_id": "1346037668107476993",
+		"lang": "ar",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360620561253224449",
+				"type": "replied_to"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "@Ghaida_oun96 ?????? ??? ?? ??? ??????????",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 0
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "3138275767",
+		"context_annotations": null,
+		"conversation_id": "1360621157255270403",
+		"created_at": "2021-02-13T16:05:37+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 15,
+					"start": 3,
+					"username": "ToTKamisama"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360621157255270403",
+		"in_reply_to_user_id": null,
+		"lang": "th",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360572941667160069",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter Web App",
+		"text": "RT @ToTKamisama: ?????????????????????????.112",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 13304
+		}
+	},
+	{
+		"attachments": {
+			"media_keys": [
+				"3_1360154906938642433",
+				"3_1360154909258121223"
+			],
+			"poll_ids": null
+		},
+		"author_id": "4258326013",
+		"context_annotations": null,
+		"conversation_id": "1360621157246881795",
+		"created_at": "2021-02-13T16:05:37+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 19,
+					"start": 3,
+					"username": "wPf9yFD9gCEIHdD"
+				}
+			],
+			"urls": [
+				{
+					"display_url": "pic.twitter.com/exqCFHietB",
+					"end": 67,
+					"expanded_url": "https://twitter.com/wPf9yFD9gCEIHdD/status/1360154911300702212/photo/1",
+					"start": 44,
+					"url": "https://t.co/exqCFHietB",
+					"unwound_url": null
+				},
+				{
+					"display_url": "pic.twitter.com/exqCFHietB",
+					"end": 67,
+					"expanded_url": "https://twitter.com/wPf9yFD9gCEIHdD/status/1360154911300702212/photo/1",
+					"start": 44,
+					"url": "https://t.co/exqCFHietB",
+					"unwound_url": null
+				}
+			]
+		},
+		"geo": null,
+		"id": "1360621157246881795",
+		"in_reply_to_user_id": null,
+		"lang": "ja",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360154911300702212",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter for Android",
+		"text": "RT @wPf9yFD9gCEIHdD: ??????????????????.???? https://t.co/exqCFHietB",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 21
+		}
+	},
+	{
+		"attachments": null,
+		"author_id": "1324751358415708161",
+		"context_annotations": null,
+		"conversation_id": "1360621161441153024",
+		"created_at": "2021-02-13T16:05:38+00:00",
+		"entities": {
+			"annotations": null,
+			"cashtags": null,
+			"hashtags": null,
+			"mentions": [
+				{
+					"end": 14,
+					"start": 3,
+					"username": "hanna2019_"
+				}
+			],
+			"urls": null
+		},
+		"geo": null,
+		"id": "1360621161441153024",
+		"in_reply_to_user_id": null,
+		"lang": "th",
+		"possibly_sensitive": false,
+		"referenced_tweets": [
+			{
+				"id": "1360610844103503874",
+				"type": "retweeted"
+			}
+		],
+		"source": "Twitter for iPad",
+		"text": "RT @hanna2019_: ??????????????????????????????????",
+		"withheld": null,
+		"non_public_metrics": null,
+		"organic_metrics": null,
+		"promoted_metrics": null,
+		"public_metrics": {
+			"like_count": 0,
+			"quote_count": 0,
+			"reply_count": 0,
+			"retweet_count": 3995
+		}
+	}
+]
