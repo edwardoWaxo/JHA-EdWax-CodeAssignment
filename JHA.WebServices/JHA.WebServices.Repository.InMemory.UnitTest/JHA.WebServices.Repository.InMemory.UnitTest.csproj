@@ -125,6 +125,12 @@
     <Content Include="SampleSerializedTwitterFeed.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="tweets_3000-3500.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tweets_4000-4500.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JHA.WebServices.Contract\JHA.WebServices.Contract.csproj">

@@ -19,6 +19,8 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 
 		public ITwitterRepository Repository { get; set; }
 		public string StreamFileName = "SampleSerializedTwitterFeed.json";
+		public string StreamFileName3k = "tweets_3000-3500.json";
+		public string StreamFileName4k = "tweets_4000-4500.json";
 		public List<TweetV2> TweetList { get; set; }
 
 		#endregion
@@ -94,7 +96,7 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 		[TestCase(3600)]
 		[TestCase(7200)]
 		[TestCase(8800)]
-		public static void CalculateTwitterRates_Foat_Test(int sampleTimeInSeconds)
+		public static void CalculateTwitterRates_Float_Test(int sampleTimeInSeconds)
 		{
 			// Arrange
 			const int hoursAsSeconds = (60 * 60);
@@ -117,7 +119,7 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 			perHour = (float)(tweetCount / (float)hourDenominator);
 
 			// Assert
-			Assert.AreNotEqual(0, sampleTimeInSeconds);
+			Assert.AreNotEqual(0, sampleTimeInSeconds, "No sample time (in seconds) was provided");
 			Console.WriteLine("CalculateTwitterRates_Foat_Test ...");
 			Console.WriteLine($"tweets: " +
 				$"{tweetCount}, sampleTime seconds: {sampleTimeInSeconds}, " +
@@ -165,6 +167,24 @@ namespace JHA.WebServices.Repository.InMemory.UnitTest
 			{
 				this.TweetList.Add(item);
 			}
+
+			// Assert
+			Assert.IsNotNull(this.TweetList);
+		}
+
+		[Test]
+		public void GetHashtagInfo_Test()
+		{
+			// Arrange
+			var hashtabList = new List<string>();
+			var filename = this.StreamFileName3k;
+			var path = TestContext.CurrentContext.TestDirectory;
+
+			// Act
+			// Read the serialized tweets, deserialize them and then extract the Hashtag entities.
+			var serializedTweets = this._ReadStreamFromFile($"{path}/{filename}");
+			var items = JsonConvert.DeserializeObject<List<TweetV2>>(serializedTweets);
+			var ht = items.Where(p => p.Entities != null && p.Entities.Hashtags != null).Select(p => p.Entities.Hashtags).ToList();
 
 			// Assert
 			Assert.IsNotNull(this.TweetList);

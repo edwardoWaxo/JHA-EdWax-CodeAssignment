@@ -15,6 +15,7 @@ namespace JHA.WebServices.Contract.Twitter
 		{
 			this.EmojiList = new List<string>();
 			this.UrlList = new List<string>();
+			this.HashTags = new List<Tweetinvi.Models.V2.HashtagV2[] > ();
 		}
 
 		#endregion
